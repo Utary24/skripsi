@@ -27,7 +27,7 @@ class TableKaryawan extends Migration
 			],
 			'jabatan'				=> [
 				'type'				=> 'ENUM',
-				'constraint'		=> "'Manager','Translator','Staff Engginer'",
+				'constraint'		=> "'Manager','Translator','Staff Engginer', 'General Affair','HC'",
 			],
 			'status'				=> [
 				'type'				=> 'ENUM',

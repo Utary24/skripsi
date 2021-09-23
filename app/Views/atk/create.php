@@ -192,6 +192,7 @@
             <!-- Footer -->
             <?php echo view('_partials/footer')?>
 
+
             <!-- End of Footer -->
 
         </div>

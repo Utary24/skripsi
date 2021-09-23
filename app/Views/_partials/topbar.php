@@ -17,15 +17,20 @@
            <li class="nav-item dropdown no-arrow">
                <a class="nav-link dropdown-toggle" href="#" id="userDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                   <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= session()->get('nama_user'); ?> | <?php if (session()->get('level') == 1) {
-                                                                                                                        echo 'Manager';
-                                                                                                                    } elseif (session()->get('level') == 2) {
-                                                                                                                        echo 'Ast. Manager';
-                                                                                                                    } elseif (session()->get('level') == 3) {
-                                                                                                                        echo "General Affair";
-                                                                                                                    } else {
-                                                                                                                        echo 'GA';
-                                                                                                                    } ?></span>
+                   <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= session()->get('nama_user'); ?>
+                   |  <?php if (session()->get('level') == 1) {
+                       echo 'Manager Engginer';
+                      } elseif (session()->get('level') == 2) {
+                       echo 'Staff Engginer';
+                      } elseif (session()->get('level') == 3) {
+                       echo "Translator";
+                      } elseif (session()->get('level') == 4) {
+                       echo "General Affair";
+                      }elseif (session()->get('level') == 5) {
+                       echo "Manager HC";
+                      }else {
+                      echo 'none';
+                      } ?></span>
                    <img class="img-profile rounded-circle" src="<?php echo base_url('circle.png');?>">
                </a>
                <!-- Dropdown - User Information -->

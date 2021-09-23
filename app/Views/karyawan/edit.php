@@ -88,7 +88,9 @@
                                                     ''                => 'Pilih', 
                                                     'Manager'         => 'Manager', 
                                                     'Translator'      => 'Translator',
-                                                    'Staff Engginer'  => 'Staff Engginer'
+                                                    'Staff Engginer'  => 'Staff Engginer',
+                                                    'General Affair'  => 'General Affair',
+                                                    'HC'              => 'HC',
 
                                                 ], $inputs['jabatan'], ['class' => 'form-control']);
                                                 ?>

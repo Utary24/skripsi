@@ -27,7 +27,7 @@
 
                     <!-- Content Row -->
                     <div class="row">
-
+                        <?php if(session()->get('level') == 4 || session()->get('level') == 5)  {?>
                         <!-- Data Atk -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
@@ -152,6 +152,8 @@
                                 </div>
                             </div>
                         </div>
+                    <?php } ?>
+                    <?php if(session()->get('level') == 1 || session()->get('level') == 2 || session()->get('level') == 3) { ?>
                         <!-- Data Dokumen -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
@@ -220,6 +222,8 @@
                                 </div>
                             </div>
                         </div>
+                    <?php }  ?>
+                    <?php if(session()->get('level') == 5)  { ?>
                         <!-- Data Karyawan -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
@@ -254,6 +258,7 @@
                                 </div>
                             </div>
                         </div>
+                    <?php }  ?>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

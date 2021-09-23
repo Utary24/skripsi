@@ -22,7 +22,7 @@
                <i class="fas fa-fw fa-tachometer-alt"></i>
                <span>Dashboard</span></a>
        </li>
-
+        <?php if(session()->get('level') == 4 || session()->get('level') == 5) { ?>
        <li class="nav-item ">
            <a class="nav-link" href="<?php echo base_url('atk'); ?>">
                <i class="fas fa-fw fa-toolbox"></i>
@@ -53,6 +53,10 @@
                <i class="fas fa-fw fa-camera-retro"></i>
                <span>Data Multimedia</span></a>
        </li>
+      <?php } ?>
+
+       <?php if(session() ->get('level') == 1 || session()->get('level') == 2  || session()->get('level') == 3 )  { ?> 
+
        <li class="nav-item">
            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dataDocument" aria-expanded="true" aria-controls="collapseUtilities">
                <i class="fas fa-fw fa-book"></i>
@@ -77,6 +81,8 @@
                </div>
            </div>
        </li>
+     <?php  } ?>
+     <?php if(session()->get('level') == 5 ) { ?>
        <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url('karyawan'); ?>">
                <i class="fas fa-fw fa-user-friends"></i>
@@ -87,7 +93,7 @@
                <i class="fas fa-fw fa-user-check"></i>
                <span>Data Users</span></a>
        </li>
-
+     <?php } ?>
        <hr class="sidebar-divider d-none d-md-block">
 
        <!-- Sidebar Toggler (Sidebar) -->

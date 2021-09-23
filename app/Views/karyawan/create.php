@@ -92,6 +92,8 @@
                                                   'Manager'               => 'Manager', 
                                                   'Translator'            => 'Translator',
                                                   'Staff Engginer'        => 'Staff Engginer',
+                                                  'General Affair'        => 'General Affair',
+                                                  'HC'                    => 'HC',
                                                   
                                                   ],
                                                   $inputs['status'], ['class' => 'form-control']);

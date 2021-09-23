@@ -30,15 +30,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary text-left">Form List Data Audio Visual  </h6>
-                        <br>
-                        <a href="<?php echo base_url('audiovisual/pdf'); ?>" target="_blank" class="btn btn-outline-danger float-left">
-                        <i class="nav-icon fas fa-print"></i> &ensp;&ensp; PDF</a>
-                         
-                        <a href="<?php echo base_url('audiovisual/excel'); ?>" method="POST" class="btn btn-outline-success float-left">
-                        <i class="nav-icon fas fa-file-excel"></i> &ensp; EXCEL</a>
-
-                        
-                            <a href="<?php echo base_url('audiovisual/create'); ?>" class="btn btn-outline-primary float-right"><i class="nav-icon fas fa-plus-square"></i>  Tambah Data</a>
+                        <a href="<?php echo base_url('audiovisual/create'); ?>" class="btn btn-outline-success float-right"><i class="nav-icon fas fa-plus-square"></i>  Tambah Data</a>
 
                         </div>
                         <div class="card-body">
@@ -69,7 +61,6 @@
                                         <th>Kode Inventaris</th>
                                         <th>Nama Item</th>
                                         <th>Merk</th>
-                                        <th>Vol</th>
                                         <th>Satuan</th>
                                         <th>Harga</th>
                                         <th>Jumlah</th>
@@ -87,10 +78,9 @@
                                             <td><?php echo $row['kode_inventaris']; ?></td>
                                             <td><?php echo $row['nama_item']; ?></td>
                                             <td><?php echo $row['merk']; ?></td>
-                                            <td><?php echo $row['vol']; ?></td>
                                             <td><?php echo $row['satuan']; ?></td>
-                                            <td>Rp.<?php echo number_format($row['harga'], 2,  ",", ".");?> </td>
-                                            <td>Rp.<?php echo number_format($row['jumlah'], 2,  ",", ".");?> </td>
+                                            <td><?php echo $row['harga']; ?></td>
+                                            <td><?php echo $row['jumlah']; ?></td>
                                             <td><?php echo $row['kondisi']; ?></td>
                                             <td><?php echo $row['keterangan']; ?></td>
                                             <td><?php echo $row['nama_karyawan']; ?></td>
@@ -114,7 +104,6 @@
                                         <th>Kode Inventaris</th>
                                         <th>Nama Item</th>
                                         <th>Merk</th>
-                                        <th>Vol</th>
                                         <th>Satuan</th>
                                         <th>Harga</th>
                                         <th>Jumlah</th>
