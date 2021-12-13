@@ -92,11 +92,11 @@
        </li>
      <?php  } ?>
      <?php if(session()->get('level') == 1 ) { ?>
-       <li class="nav-item">
+      <!--  <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url('karyawan'); ?>">
                <i class="fas fa-fw fa-user-friends"></i>
                <span>Data Karyawan</span></a>
-       </li>
+       </li> -->
        <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url('users'); ?>">
                <i class="fas fa-fw fa-user-check"></i>
