@@ -10,11 +10,12 @@ class DataUsers extends Seeder
 	{
 		$users = [
 			[
+
 				'id'		=> 1,
-				'nama_user'	=> 'Didit Mulyana',
-				'username'	=> 'didit001',
-				'password'	=> 'didit001',
-				'level'		=> 1
+				'nama_user'	=> 'Bagas Shidarta',
+				'username'  => 'bagas001',
+				'password'	=> 'bagas001',
+				'level'	    => 1
 			],
 
 			[
@@ -56,15 +57,6 @@ class DataUsers extends Seeder
 				'password'	=> 'ajuar001',
 				'level'		=> 4
 			],
-
-			[
-
-				'id'		=> 7,
-				'nama_user'	=> 'Bagas',
-				'username'  => 'bagas001',
-				'password'	=> 'bagas001',
-				'level'	    => 5
-			]
 
 		];
 

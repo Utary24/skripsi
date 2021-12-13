@@ -97,22 +97,6 @@
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Tanggal Masuk</th>
-                                        <th>Kode Inventaris</th>
-                                        <th>Nama Item</th>
-                                        <th>Merk</th>
-                                        <th>Satuan</th>
-                                        <th>Harga</th>
-                                        <th>Jumlah</th>
-                                        <th>kondisi</th>
-                                        <th>Keterangan</th>
-                                        <th>Staff</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </tfoot>
                                 </table>
                             </div>
                         </div>

@@ -98,19 +98,6 @@
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Kode Nota</th>
-                                        <th>Vendor</th>
-                                        <th>Jumlah Barang</th>
-                                        <th>Status Barang</th>
-                                        <th>Vendor</th>
-                                        <th>Tanggal Masuk</th>
-                                        <th>Staff</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </tfoot>
                                 </table>
                             </div>
                         </div>

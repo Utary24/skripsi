@@ -11,13 +11,13 @@ class TableNotaMasukSchema extends Migration
 		$this->forge->addField([
 			'notamasuk_id'		=> [
 				'type'				=> 'INT',
-				'constraint'		=> 36,
+				'constraint'		=> 10,
 				'unsigned'			=> TRUE,
 				'auto_increment'	=> TRUE
 			],
 			'kode_nota'				=> [
 				'type'				=> 'VARCHAR',
-				'constraint'		=> '100'
+				'constraint'		=> '50'
 			],
 			'vendor'				=> [
 				'type'				=> 'ENUM',
@@ -25,11 +25,11 @@ class TableNotaMasukSchema extends Migration
 			],
 			'nama_barang'			=> [
 				'type'				=> 'VARCHAR',
-				'constraint'		=> '100'
+				'constraint'		=> '50'
 			],
 			'jumlah_barang'			=> [
 				'type'				=> 'VARCHAR',
-				'constraint'		=> '100'
+				'constraint'		=> '50'
 			],
 			'status_document'		=> [
 				'type'				=> 'ENUM',
@@ -39,9 +39,9 @@ class TableNotaMasukSchema extends Migration
 			'tanggal_masuk'			=> [
 				'type'				=> 'DATE',
 			],
-			'karyawan_id'			=> [
+			'users_id'			=> [
 				'type'				=> 'INT',
-				'constraint'		=> 36,
+				'constraint'		=> 10,
 				'unsigned'			=> TRUE,
 				'null'				=> TRUE
 			]
@@ -49,7 +49,7 @@ class TableNotaMasukSchema extends Migration
 		]);
 
 		$this->forge->addKey('notamasuk_id', true);
-		$this->forge->addForeignKey('karyawan_id', 'karyawan', 'karyawan_id', 'cascade', 'cascade');
+		$this->forge->addForeignKey('users_id', 'users', 'users_id', 'cascade', 'cascade');
 		$this->forge->createTable('notamasuk', true);
 	}
 

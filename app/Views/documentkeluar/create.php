@@ -125,20 +125,6 @@
                                                 echo form_input($nama);
                                                 ?>
                                               </div>
-                                              <div class="form-group">
-                                                <?php
-                                                echo form_label(' Jumlah Isi Document');
-                                                $nama = [
-                                                  'type'  => 'text',
-                                                  'name'  => 'isi_box',
-                                                  'id'    => 'isi_box',
-                                                  'value' => $inputs['isi_box'],
-                                                  'class' => 'form-control',
-                                                  'placeholder' => 'Masukan Jumlah Isi Dari Box Document'
-                                                ];
-                                                echo form_input($nama);
-                                                ?>
-                                              </div>
                                                 <div class="form-group">
                                                 <?php
                                                 echo form_label('Bahasa Document', 'bahasa');
@@ -220,7 +206,10 @@
                                                 ], $inputs['jabatan'], ['class' => 'form-control']);
                                                 ?>
                                               </div>
-                                              <div class="form-group">
+                                              
+                                            </div>
+                                            <div class="col-md-12">
+                                             <div class="form-group">
                                                 <?php
                                                 echo form_label('Penanggung Jawab Data', 'staff');
                                                 echo form_dropdown('karyawan_id', $karyawan, $inputs['karyawan_id'], ['class' => 'form-control']);

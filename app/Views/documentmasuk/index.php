@@ -101,21 +101,6 @@
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Kode</th>
-                                        <th>Type</th>
-                                        <th>Number</th>
-                                        <th>Judul</th>
-                                        <th>Vendor</th>
-                                        <th>Bahasa</th>
-                                        <th>Status</th>
-                                        <th>Tanggal Masuk</th>
-                                        <th>Staff</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </tfoot>
                                 </table>
                             </div>
                         </div>

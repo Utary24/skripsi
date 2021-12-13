@@ -102,12 +102,6 @@
                                                 echo form_input($dokumen_number);
                                                 ?>
                                               </div>
-                                              <div class="form-group">
-                                                <?php
-                                                echo form_label('Vendor', 'vendor');
-                                                echo form_dropdown('vendor', ['' => 'Pilih Vendor', 'KJB' => 'KJB', 'HSRCC' => 'HSRCC'], $inputs['vendor'], ['class' => 'form-control']);
-                                                ?>
-                                              </div>
                                             </div>
                                             <div class="col-md-6">
                                               <div class="form-group">
@@ -134,6 +128,20 @@
                                                   'placeholder' => 'Tanggal Masuk Document'
                                                 ];
                                                 echo form_input($tanggalmasuk);
+                                                ?>
+                                              </div>
+                                               <div class="form-group">
+                                                <?php
+                                                echo form_label('Vendor', 'vendor');
+                                                echo form_dropdown('vendor', ['' => 'Pilih Vendor', 'KJB' => 'KJB', 'HSRCC' => 'HSRCC'], $inputs['vendor'], ['class' => 'form-control']);
+                                                ?>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                              <div class="form-group">
+                                                <?php
+                                                echo form_label('Penanggung Jawab Data', 'staff');
+                                                echo form_dropdown('karyawan_id', $karyawan, $inputs['karyawan_id'], ['class' => 'form-control']);
                                                 ?>
                                               </div>
                                             </div>

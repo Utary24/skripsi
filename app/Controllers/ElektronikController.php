@@ -46,36 +46,42 @@ class ElektronikController extends BaseController
 		}
 
 
-	 $atk = new AtkModel();
-     $dataAtk = $atk->getData();
+	 $elektronik = new ElektronikModel();
+     $dataElektronik = $elektronik->getData();
 	
-		$spreadsheet = new Spreadsheet();
+	 $spreadsheet = new Spreadsheet();
 
 
  // tulis header/nama kolom 
     $spreadsheet->setActiveSheetIndex(0)
-                ->setCellValue('B1', 'Kode Barang')
-                ->setCellValue('C1', 'Nama')
-                ->setCellValue('D1', 'Jenis')
-                ->setCellValue('E1', 'Stock Awal')
-				->setCellValue('F1', 'Stock Masuk')
-                ->setCellValue('G1', 'Stock Keluar')
-                ->setCellValue('H1', 'Stock Akhir')
-                ->setCellValue('I1', 'Staff');
+                ->setCellValue('B1', 'Tanggal Masuk')
+                ->setCellValue('C1', 'Kode Inventaris')
+                ->setCellValue('D1', 'Nama ')
+                ->setCellValue('E1', 'Merek ')
+				->setCellValue('F1', 'Satuan')
+                ->setCellValue('G1', 'Vol')
+                ->setCellValue('H1', 'Harga')
+                ->setCellValue('I1', 'Jumlah')
+                ->setCellValue('J1', 'Kondisi')
+                ->setCellValue('K1', 'Keterangan')
+                ->setCellValue('L1', 'Staff');
 
     
     $column = 2;
     // tulis data mobil ke cell
-    foreach($dataAtk as $data) {
+    foreach($dataElektronik as $data) {
         $spreadsheet->setActiveSheetIndex(0)
-                    ->setCellValue('B' . $column, $data['kode_barang'])
-                    ->setCellValue('C' . $column, $data['nama_barang'])
-                    ->setCellValue('D' . $column, $data['jenis_barang'])
-                    ->setCellValue('E' . $column, $data['stock_awal'])
-                    ->setCellValue('F' . $column, $data['stock_masuk'])
-					->setCellValue('G' . $column, $data['stock_keluar'])
-					->setCellValue('H' . $column, $data['stock_akhir'])
-                    ->setCellValue('I' . $column, $data['nama_karyawan']);
+                    ->setCellValue('B' . $column, $data['tanggal_masuk'])
+                    ->setCellValue('C' . $column, $data['kode_inventaris'])
+                    ->setCellValue('D' . $column, $data['nama_item'])
+                    ->setCellValue('E' . $column, $data['merk'])
+                    ->setCellValue('F' . $column, $data['satuan'])
+					->setCellValue('G' . $column, $data['vol'])
+					->setCellValue('H' . $column, $data['harga'])
+					->setCellValue('I' . $column, $data['jumlah'])
+					->setCellValue('J' . $column, $data['kondisi'])
+					->setCellValue('K' . $column, $data['keterangan'])
+                    ->setCellValue('L' . $column, $data['nama_karyawan']);
 
         $column++;
     }
@@ -83,7 +89,7 @@ class ElektronikController extends BaseController
 
 	// tulis dalam format .xlsx
     $writer = new Xlsx($spreadsheet);
-    $fileName = 'Data ATK';
+    $fileName = 'Data elektronik';
 
     // Redirect hasil generate xlsx ke web client
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
@@ -102,28 +108,28 @@ class ElektronikController extends BaseController
 		}
 		
 		$data = array(
-			'atk'	=> $this->atk_model->getData(),	
+			'elektronik'	=> $this->elektronik_model->getData(),	
 		);
-		$html =  view('atk/pdf', $data);
+		$html =  view('elektronik/pdf', $data);
 
 		// test pdf
 
-		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, 'A4', true, 'UTF-8', false);
+		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, 'A2', true, 'UTF-8', false);
 		// set font tulisan
 		$pdf->SetFont('dejavusans', '', 10);
 		$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
 
 		// $pdf->SetCreator(PDF_CREATOR);
 		$pdf->SetAuthor('Utari Pratiwi');
-		$pdf->SetTitle('Data ATK HSRCC');
-		$pdf->SetSubject('Data ATK');
+		$pdf->SetTitle('Data elektronik HSRCC');
+		$pdf->SetSubject('Data elektronik');
 		// add a page
 		$pdf->AddPage();
 		// write html
 		$pdf->writeHTML($html);
 		$this->response->setContentType('application/pdf');
 		// ouput pdf
-		$pdf->Output('data_atk.pdf', 'I');
+		$pdf->Output('data_elektronik.pdf', 'I');
 
 
 	}

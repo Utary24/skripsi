@@ -22,31 +22,40 @@
                <i class="fas fa-fw fa-tachometer-alt"></i>
                <span>Dashboard</span></a>
        </li>
-        <?php if(session()->get('level') == 4 || session()->get('level') == 5) { ?>
+        <?php if(session()->get('level') == 1 || session()->get('level') == 3) { ?>
        <li class="nav-item ">
            <a class="nav-link" href="<?php echo base_url('atk'); ?>">
                <i class="fas fa-fw fa-toolbox"></i>
                <span>Data ATK</span></a>
        </li>
+
+       <!--
        <li class="nav-item ">
            <a class="nav-link" href="<?php echo base_url('kendaraan'); ?>">
                <i class="fas fa-fw fa-car-side"></i>
                <span>Data Kendaraan</span></a>
-       </li>
+       </li> 
        <li class="nav-item ">
            <a class="nav-link" href="<?php echo base_url('asset'); ?>">
                <i class="fas fa-fw fa-hand-holding-usd"></i>
                <span>Data Asset</span></a>
-       </li>
+       </li> 
+
        <li class="nav-item ">
            <a class="nav-link" href="<?php echo base_url('audiovisual'); ?>">
                <i class="fas fa-fw fa-broadcast-tower"></i>
                <span>Data Audio Visual</span></a>
        </li>
+        -->
        <li class="nav-item ">
            <a class="nav-link" href="<?php echo base_url('furniture'); ?>">
                <i class="fas fa-fw fa-couch"></i>
                <span>Data Furniture</span></a>
+       </li>
+        <li class="nav-item ">
+           <a class="nav-link" href="<?php echo base_url('elektronik'); ?>">
+               <i class="fas fa-laptop"></i>
+               <span>Data Elektronik</span></a>
        </li>
        <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url('multimedia'); ?>">
@@ -55,7 +64,7 @@
        </li>
       <?php } ?>
 
-       <?php if(session() ->get('level') == 1 || session()->get('level') == 2  || session()->get('level') == 3 )  { ?> 
+       <?php if(session() ->get('level') == 1 || session()->get('level') == 2)  { ?> 
 
        <li class="nav-item">
            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dataDocument" aria-expanded="true" aria-controls="collapseUtilities">
@@ -82,7 +91,7 @@
            </div>
        </li>
      <?php  } ?>
-     <?php if(session()->get('level') == 5 ) { ?>
+     <?php if(session()->get('level') == 1 ) { ?>
        <li class="nav-item">
            <a class="nav-link" href="<?php echo base_url('karyawan'); ?>">
                <i class="fas fa-fw fa-user-friends"></i>

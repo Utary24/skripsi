@@ -34,10 +34,9 @@
                         <a href="<?php echo base_url('documentkeluar/pdf'); ?>" target="_blank" class="btn btn-outline-danger float-left">
                         <i class="nav-icon fas fa-print"></i> &ensp;&ensp; PDF</a>
                          
-                        <a href="<?php echo base_url('documentkeluar/excel'); ?>" method="POST" class="btn btn-outline-success float-left">
+                                            <a href="<?php echo base_url('documentkeluar/excel'); ?>" method="POST" class="btn btn-outline-success float-left">
                         <i class="nav-icon fas fa-file-excel"></i> &ensp; EXCEL</a>
 
-                        
                             <a href="<?php echo base_url('documentkeluar/create'); ?>" class="btn btn-outline-success float-right"><i class="nav-icon fas fa-plus-square"></i>  Tambah Data</a>
 
                         </div>
@@ -81,6 +80,7 @@
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
                                     <?php foreach ($documentkeluar as $key => $row) { ?>
                                         <tr>
@@ -111,25 +111,7 @@
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Kode</th>
-                                        <th>Type</th>
-                                        <th>Number</th>
-                                        <th>Judul</th>
-                                        <th>Nomer Box</th>
-                                        <th>Isi Box</th>
-                                        <th>Tanggal Keluar</th>
-                                        <th>Vendor</th>
-                                        <th>Bahasa</th>
-                                        <th>Approved</th>
-                                        <th>Jabatan</th>
-                                        <th>Status</th>
-                                        <th>Staff</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </tfoot>
+
                                 </table>
                             </div>
                         </div>

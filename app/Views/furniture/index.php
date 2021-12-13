@@ -100,20 +100,6 @@
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Barang</th>
-                                        <th>Kode Inventaris</th>
-                                        <th>Harga </th>
-                                        <th>Jumlah</th>
-                                        <th>tanggal_beli</th>
-                                        <th>total</th>
-                                        <th>kondisi</th>
-                                        <th>Staff</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </tfoot>
                                 </table>
                             </div>
                         </div>

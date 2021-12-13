@@ -23,22 +23,21 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800 text-center">Data Asset</h1>
+                    <h1 class="h3 mb-2 text-gray-800 text-center">Data elektronik</h1>
                     <p class="mb-4 text-center">Pengecekan data secara rutin akan terciptanya konsistensi data yang baik</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary text-left">Form List Data Asset</h6> <br>
-                        
-                        <a href="<?php echo base_url('asset/pdf'); ?>" target="_blank" class="btn btn-outline-danger float-left">
+                            <h6 class="m-0 font-weight-bold text-primary text-left">Form List Data elektronik </h6>
+                        <br>
+                        <a href="<?php echo base_url('elektronik/pdf'); ?>" target="_blank" class="btn btn-outline-danger float-left">
                         <i class="nav-icon fas fa-print"></i> &ensp;&ensp; PDF</a>
                          
-                        <a href="<?php echo base_url('asset/excel'); ?>" method="POST" class="btn btn-outline-success float-left">
+                        <a href="<?php echo base_url('elektronik/excel'); ?>" method="POST" class="btn btn-outline-success float-left">
                         <i class="nav-icon fas fa-file-excel"></i> &ensp; EXCEL</a>
 
-                        
-                            <a href="<?php echo base_url('asset/create'); ?>" class="btn btn-outline-primary float-right"><i class="nav-icon fas fa-plus-square"></i>  Tambah Data</a>
+                            <a href="<?php echo base_url('elektronik/create'); ?>" class="btn btn-outline-primary float-right"><i class="nav-icon fas fa-plus-square"></i>  Tambah Data</a>
 
                         </div>
                         <div class="card-body">
@@ -65,9 +64,12 @@
                                     <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Kendaraan</th>
                                         <th>Tanggal Masuk</th>
-                                        <th>Unit</th>
+                                        <th>Kode Inventaris</th>
+                                        <th>Nama Item </th>
+                                        <th>Merek</th>
+                                        <th>Satuan</th>
+                                        <th>Vol</th>
                                         <th>Harga</th>
                                         <th>Jumlah</th>
                                         <th>Kondisi</th>
@@ -77,12 +79,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($asset as $key => $row) { ?>
+                                    <?php foreach ($elektronik as $key => $row) { ?>
                                         <tr>
                                             <td><?php echo $key + 1; ?></td>
-                                            <td><?php echo $row['nama_kendaraan']; ?></td>
                                             <td><?php echo $row['tanggal_masuk']; ?></td>
-                                            <td><?php echo $row['unit']; ?></td>
+                                            <td><?php echo $row['kode_inventaris']; ?></td>
+                                            <td><?php echo $row['nama_item']; ?></td>
+                                            <td><?php echo $row['merk']; ?></td>
+                                            <td><?php echo $row['satuan']; ?></td>
+                                            <td><?php echo $row['vol']; ?></td>
                                             <td>Rp.<?php echo number_format($row['harga'], 2,  ",", ".");?> </td>
                                             <td>Rp.<?php echo number_format($row['jumlah'], 2,  ",", ".");?> </td>
                                             <td><?php echo $row['kondisi']; ?></td>
@@ -90,10 +95,10 @@
                                             <td><?php echo $row['nama_karyawan']; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url('asset/edit/' . $row['asset_id']); ?>" class="btn btn-sm btn-success">
+                                                    <a href="<?php echo base_url('elektronik/edit/' . $row['elektronik_id']); ?>" class="btn btn-sm btn-success">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
-                                                    <a href="<?php echo base_url('asset/delete/' . $row['asset_id']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?');">
+                                                    <a href="<?php echo base_url('elektronik/delete/' . $row['elektronik_id']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?');">
                                                         <i class="fa fa-trash-alt"></i>
                                                     </a>
                                                 </div>

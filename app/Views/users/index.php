@@ -91,16 +91,6 @@
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                       <th>Nama Users</th>
-                                        <th>username</th>
-                                        <th>password</th>
-                                        <th>level</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </tfoot>
                                 </table>
                             </div>
                         </div>

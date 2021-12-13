@@ -27,7 +27,7 @@
 
                     <!-- Content Row -->
                     <div class="row">
-                        <?php if(session()->get('level') == 4 || session()->get('level') == 5)  {?>
+                        <?php if(session()->get('level') == 3 || session()->get('level') == 1)  {?>
                         <!-- Data Atk -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
 
-                        <!-- Data Kendaraan -->
+                        <!-- Data Kendaraan 
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
@@ -62,9 +62,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <!-- Data Assets -->
+                        <!-- Data Assets 
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
@@ -80,9 +80,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <!-- Data Audio Visual -->
+                        <!-- Data Audio Visual
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Data Furniture -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -146,14 +146,14 @@
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_elektronik ?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-camera-retro fa-2x text-blue-300"></i>
+                                            <i class="fas fa-laptop fa-2x text-blue-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     <?php } ?>
-                    <?php if(session()->get('level') == 1 || session()->get('level') == 2 || session()->get('level') == 3) { ?>
+                    <?php if(session()->get('level') == 1 || session()->get('level') == 2) { ?>
                         <!-- Data Dokumen -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
@@ -223,7 +223,7 @@
                             </div>
                         </div>
                     <?php }  ?>
-                    <?php if(session()->get('level') == 5)  { ?>
+                    <?php if(session()->get('level') == 1)  { ?>
                         <!-- Data Karyawan -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">

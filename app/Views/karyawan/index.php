@@ -69,6 +69,7 @@
                                         <th>Jabatan </th>
                                         <th>Status </th>
                                         <th>Tanggal Masuk</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -93,17 +94,6 @@
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Karyawan</th>
-                                        <th>Divisi </th>
-                                        <th>Jabatan </th>
-                                        <th>Status </th>
-                                        <th>Tanggal Masuk</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </tfoot>
                                 </table>
                             </div>
                         </div>

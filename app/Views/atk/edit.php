@@ -57,7 +57,7 @@
                                             <div class="col-md-6">
 
                                               <div class="form-group">
-                                                <?php echo form_label('Kode Nota', 'kode_nota'); ?>
+                                                <?php echo form_label('Kode Barang', 'kode_barang'); ?>
                                                 <?php echo form_input('kode_barang', $atk['kode_barang'],
 
                                                  ['class' => 'form-control', 'placeholder' => 'atk Document']

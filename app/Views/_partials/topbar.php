@@ -19,15 +19,11 @@
 
                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= session()->get('nama_user'); ?>
                    |  <?php if (session()->get('level') == 1) {
-                       echo 'Manager Engginer';
+                       echo 'Human Capital Manager ';
                       } elseif (session()->get('level') == 2) {
-                       echo 'Staff Engginer';
+                       echo ' Departement';
                       } elseif (session()->get('level') == 3) {
-                       echo "Translator";
-                      } elseif (session()->get('level') == 4) {
-                       echo "General Affair";
-                      }elseif (session()->get('level') == 5) {
-                       echo "Manager HC";
+                       echo "Internal Staff GA";
                       }else {
                       echo 'none';
                       } ?></span>

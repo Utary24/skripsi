@@ -51,7 +51,7 @@ class DataKaryawan extends Seeder
 			],
 			[
 				'karyawan_id' 	=> 6,
-				'nama_karyawan'	=> 'Ajuar Amanda',
+				'nama_karyawan'	=> 'Ajuar Ramanda',
 				'divisi'		=> 'Umum',
 				'jabatan'		=> 'General Affair',
 				'status'		=> 'AKTIF',
